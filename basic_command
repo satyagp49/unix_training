@@ -1,0 +1,57 @@
+basic commands
+    - cat 
+        which sends file content to stdout.
+    - ls 
+         % ls -l
+        total 3
+        -rw-rw-rw-   1 john     1659    386 Feb  3 08:15 groceries
+        -rw-r--r--   1 john     1659     97 Mar 10 23:46 schedule
+        -rw-------   1 john     1659    123 Mar 11 13:39 todo
+        1 file type
+        2 permission
+            1 permission to owner
+            2 permission to group
+            3 permission to other
+        3 number of links
+        4 owner
+        5 group
+        6 size of file
+        7 month
+        8 date
+        9 time
+        10 file name       
+        
+    - date
+        displays system time & date
+    - logname
+        user name
+    - cal
+        calendar
+    - 
+    
+    
+file/ directory  operations
+
+    - touch 
+        create normal file with permission "rw-rw-r--"
+    - cp 
+        copies file/ directory ( use '-r' option).
+    - mv
+        move or rename file / directory ( use '-r' option).
+    - rm 
+        copies file/ directory ( use '-r' option).
+    - pwd
+        displays current working directory.
+    - cd 
+        change directory.
+    - mkdir 
+        create new directory
+    - file
+        gives file information.
+    - chmod
+        change file/ directory permission's.
+        
+        
+        
+        
+    

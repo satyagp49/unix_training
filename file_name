@@ -1,0 +1,18 @@
+    All file names are case sensitive. So filename vivek.txt Vivek.txt VIVEK.txt all are three different files.
+    You can use upper and lowercase letters, numbers, “.” (dot), and “_” (underscore) symbols.
+    You can use other special characters such as blank space, but they are hard to use and it is better to avoid them.
+    In short, filenames may contain any character except / (root directory), which is reserved as the separator between files and directories in a pathname. You cannot 
+use the null character.
+    No need to use . (dot) in a filename. Some time dot improves readability of filenames. And you can use dot based filename extension to identify file. For example:
+        .sh = Shell file
+        .tar.gz = Compressed archive
+    Most modern Linux and UNIX limit filename to 255 characters (255 bytes). However, some older version of UNIX system limits filenames to 14 characters only.
+    A filename must be unique inside its directory. For example, inside /home/vivek directory you cannot create a demo.txt file and demo.txt directory name. However, 
+other directory may have files with the same names. For example, you can create demo.txt directory in /tmp.
+
+
+>>df -h
+status of inode file sytems
+$ df -i
+$ls -i
+$stat file

@@ -1,0 +1,124 @@
+Modes
+    we can check from bottom of vim.
+    - the file name or is blank, you are in normal/ command mode.
+        press ESC to enter in normal/ command.
+    - If you are in insert mode, the indicator dis-plays --INSERT--.
+        from normal mode press 'i'.
+    - if you are in visual mode, the indicator shows --VISUAL-- .
+        from normal mode press 'v'.
+
+help
+    - enter ":help " in normal mode
+        
+Creating file
+    - vim file_name
+        - enter insert mode
+        - edit/ file contents
+        - enter command mode
+        - write/ save file
+            - following are different commands
+                ':w' - write/ save file
+                ':q!' - without saving quit from vim editor.
+                ':wq' - write/ save file then quit from vim editor. 
+                'ZZ'  - write/ save file then quit from vim editor. 
+Deleting text
+    single character
+        - press 'x' to delete characters from after cursor.
+    delete word
+        - 'dnw' from cursor next 'n' word are deleted
+        - 'd$' from cursor to end of line.
+    using '.'
+        - It repeats the last delete or change command
+
+Replacing text
+    - ':1,$s/string_1/string_2/g'
+        - will replace all matching with "string_1" with "string_2".
+    - ':%s/string_1/string_2/cg'
+        - will Interactively Replacing One Word "string_1" Another "string_2".
+    
+Search text 
+    - ':set hlsearch' to high-light Search string/ text.
+    - ':set ignorecase' : if you want.  
+    - '/search_strin'.
+    - '/char_start.char_end'
+    - 'n' for next Search.
+    - 'N' previous direction.
+
+mark text 
+    max 26 can be done in file
+    - 'mchar' : this will mark with "char".
+        'ma'
+    - ''char' : this will move at mark having "char".
+        ''a'
+    - ':marks' : to show total marks.
+    - delete mark
+        after moving cursor to mark which to be delete, then 'd'mark'
+        'd'a'
+    
+copy lines
+    - 'ndd' 
+    - 'nyy' copies 'n' number of lines.
+    - 'p' paste copied lines.
+        
+Deleting/ insert line
+    - use the 'dd' command, which deletes the line on which the cursor is positioned.
+        - press "ndd" delete 'n' number of lines from cursor to below lines.
+    - type 'o' to open up a new line. Enter the text for the line and then press <Esc> to end insert mode.
+    - If you want to open a line above the cursor, use the 'O' (uppercase) command.
+    
+Undo & redo
+    Undo
+    - go to normal mode
+    - press 'u' for undo changes.
+    Redo
+    - go to normal mode
+    - press 'ctrl + r' to redo changes.
+    
+Positioning cursor
+    By line 
+        - 'nG' puts you on line n.
+        - ':n' the cursor will move to "n" of file.
+    end of line
+        - '$'.
+        - 'G'. 
+    single character
+        - 'fchar' cursor moves to 1st character of "char" of current line.
+            - 'nfchar' moves to nth match.
+    status of cursor
+        - 'ctrl+g'
+            
+Control commands
+    line number
+        - ':set number'
+        - ':set nonumber'
+            
+multiple files
+    $ vim file1 file2
+    - move to next file
+        ':next file2'
+        - the ':next' command can take a repeat count. For example, if you execute the command
+        - ':2next'
+        Vim acts like you issued a ':next' twice.
+    - move to  previous file
+        ':previous file1'
+    - save & to other files
+        ':wnext'
+        ':wprevious'
+    - only save current file
+        ':write'
+        ':w'
+    - 'CTRL+^' : switch to previous file without saving current file.
+    
+multiple windows
+    - ':split file1' : open file file1 in new split window.
+    - 'CTRL+w' : switch current windows.
+    - ':q!' : close current window without saving.
+    
+changing vim editor settings
+    - creating setting file if not present
+        - $ touch ~/.vimrc
+    - add any default setting's you want to add in file ~/.vimrc
+        ex:
+            set number 
+            set hlsearch
+    
