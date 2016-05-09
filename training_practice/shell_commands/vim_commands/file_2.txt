@@ -1,0 +1,44 @@
+s;kjfhas;kdjfha;skdf
+as'ds'ldfjasldfkj kllkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk llllllllllll lfkha;sldkfhas;df
+adasdlkfha'sdfk
+asd'lfkja;sldkfas
+as'dlfkh'lsdkmit     Physics    80
+2)    Rahul    Maths      90
+3)    Shyam    Biology    87
+4)    Kedar    English    85
+5)    Hari     History    89
+m1036402@a2ml14762l:/tmp$ awk '{print $1}' marks.txt
+1)
+2)
+3)
+4)
+5)
+m1036402@a2ml14762l:/tmp$ awk '{print $2}' marks.txt
+Amit
+Rahul
+Shyam
+Kedar
+Hari
+m1036402@a2ml14762l:/tmp$ awk '{print "count = ", length($1)}' marks.txt
+
+count =  2
+count =  2
+count =  2
+count =  2
+count =  2
+m1036402@a2ml14762l:/tmp$ awk '{print "count = ", length($2)}' marks.txt
+count =  4
+count =  5
+count =  5
+count =  5
+count =  4
+m1036402@a2ml14762l:/tmp$ awk 'length($2) < 5' marks.txt
+1)    Amit     Physics    80
+5)    Hari     History    89
+m1036402@a2ml14762l:/tmp$ awk '{print "count = ", length($2) < 5}' marks.txt
+count =  1
+count =  0
+count =  0
+count =  0
+count =  1
+asda
